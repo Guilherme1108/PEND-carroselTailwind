@@ -1,0 +1,11 @@
+#carrossel::after {
+  content: attr(texto-descricao); /* pegando o atributo texto-descricao do JS */
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-block: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}

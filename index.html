@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
     <title>Carrosel</title>
-</head>
-<body class="grid-row place-items h-full">  
+    <meta charset="UTF-8" />
+    <title>Carrossel Tailwind</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <div class="absolute bottom-30 w-full h-[100vh]">
-        <img src="./img/mesaPingPong.jpg" alt="Yasuo"
-        class="h-[70vh] w-[70vh]">
-    </div>
-</body>
+  </head>
+  <body class="grid h-screen place-items-center bg-[#0003]">
+
+    <div
+      id="carrossel"
+      class="relative h-[80%] w-[80%] rounded-xl bg-cover bg-center shadow-xl"
+    ></div>
+
+    <script src="script.js"></script>
+
+  </body>
 </html>
