@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrosel</title>
-    <meta charset="UTF-8" />
-    <title>Carrossel Tailwind</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Slider Senai Tailwind</title>
+  <style type="text/tailwindcss">
+    .carrossel {
+            animation: slider 12s infinite, fade 4s;
+            position: relative;
+        }
 
-  </head>
-  <body class="grid h-screen place-items-center bg-[#0003]">
+        .carrossel::after {
+            content: var(--text-description);
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
 
-    <div
-      id="carrossel"
-      class="relative h-[80%] w-[80%] rounded-xl bg-cover bg-center shadow-xl"
-    ></div>
+        @keyframes slider {
+            0%, 33% {
+                background-image: url(./img/mesaPingPong.jpg);
+                --text-description: "Muita diversão e alegria";
+            }
+            34%, 66% {
+                background-image: url(./img/plantaEntrada.jpg);
+                --text-description: "Local onde aguardei para fazer a prova";
+            }
+            67%, 100% {
+                background-image: url(./img/puff.jpg);
+                --text-description: "Região para descansar a mente";
+            }
+        }
 
-    <script src="script.js"></script>
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            15%, 85% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
 
-  </body>
+<body class="grid h-screen w-screen place-items-center  bg:#0003">
+  <div class="carrossel w-[80%] h-[80%] shadow-md rounded-xl bg-center bg-cover overflow-hidden">
+  </div>
+</body>
+
 </html>
